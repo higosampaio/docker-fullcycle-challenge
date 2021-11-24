@@ -1,19 +1,9 @@
-FROM golang:1.17
-
-# Set the current working directory inside the container
-WORKDIR /go/src/app
-
-# Copy everything from the current directory to the 
-# PWD (Present Working Directory) inside the container
+FROM golang:1.17 AS builder
+WORKDIR /go/src/go-sample
 COPY . .
+RUN GOOS=linux go build ./app.go
 
-RUN go mod init
-
-# Download all the dependencies
-RUN go get -d -v ./...
-
-# Install the package
-RUN go install -v ./...
-
-# Run the executable
-CMD ["app"]
+FROM scratch
+WORKDIR /go/src/go-sample
+COPY --from=builder /go/src/go-sample/app .
+CMD ["/go/src/go-sample/app"]
