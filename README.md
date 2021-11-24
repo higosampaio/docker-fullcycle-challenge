@@ -19,7 +19,7 @@ docker build -t <image_name> .
 
 ### 2. Run image
 
-Access the repo and execute the following command:
+Now execute the following command:
 
 ```docker
 docker run --rm <image_name>
