@@ -1,9 +1,9 @@
+<h1 align="center">Docker FullCycle Challenge</h1>
+
 <p align="center">
   <img alt="Docker" src="https://img.shields.io/badge/-docker-important?style=for-the-badge&color=0897e5&logo=docker&logoColor=white" />
   <img alt="Go" src="https://img.shields.io/badge/-golang-important?style=for-the-badge&color=79d4fd&logo=go&logoColor=black" />
 </p>
-
-<h1 align="center">Docker FullCycle Challenge</h1>
 
 <!-- GETTING STARTED -->
 
